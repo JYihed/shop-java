@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.shop.mapper.GoodsMapper">
+    <insert id="AddGood">
+        insert into goods values (#{id},#{name},#{imag1},#{imag2},#{imag3},#{price},#{inventory});
+    </insert>
+    <select id="FindAllGoods" resultType="com.example.shop.pojo.Goods">
+        select * from goods;
+    </select>
+    <select id="FindGoodsById" resultType="com.example.shop.pojo.Goods">
+        select * from goods where id=#{id};
+    </select>
+
+
+</mapper>
